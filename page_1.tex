@@ -1,9 +1,14 @@
 \documentclass[6pt]{article}
 
 \usepackage[letterpaper]{geometry}
+\usepackage{mathtools}
 \usepackage{lmodern}
 \geometry{top=1.0cm, bottom=1.0cm, left=1.0cm, right=1.0cm}
 \pagenumbering{gobble}
+
+% horizontal line spanning the whole page
+
+\newcommand{\HL}{\par\noindent\rule{\textwidth}{0.4pt}}
 
 \begin{document}
 
@@ -15,41 +20,61 @@
 
 \textbf{TERMS}
 
-\par\noindent\rule{\textwidth}{0.4pt}
+
+\HL
 
 \textbf{Probability Model:} a mathematical representation of a random event. 
 \textbf{Sample Space:} a range of values of a random variable. 
 \textbf{Probability:} a quantifiable amount for the likelihood of an event occurring. 
-\textbf{Axioms of Probability:} \textbf{1)} Probability of l
-\textbf{<++>:} <++>
-\textbf{<++>:} <++>
-\textbf{<++>:} <++>
-\textbf{<++>:} <++>
-\textbf{<++>:} <++>
+%\textbf{Axioms of Probability:} \textbf{1)} Probability of l
+\textbf{Independent:} one event does not influence another.
+\textbf{Disjoint:} the probability of two specific events occurring is 0.
+\textbf{Neither (example):} a person does not eat red meat \& is vegetarian.
+\textbf{Both (example):} because you passed your driver's test, you have a driver's license.
+\textbf{PMF:} $P(X = x) \rightarrow$ mapped value.
+\textbf{:} <++>
 
-%\begin{tabular}{l | l}
+\HL
 
-%\parbox{0.5\textwidth}{
+\textbf{FORMULAS}
 
-%\begin{itemize}
+\HL
 
-%\item <++>
-%\end{itemize}
 
-%}
+\begin{tabular}{l | l}
 
-%&
+\parbox{0.5\textwidth}{
 
-%\parbox{0.5\textwidth}{
-%\begin{flushright}
-%\begin{itemize}
+\begin{itemize}
 
-%\item <++>
+\item $\mu_{x} = \Sigma x \cdot p(x)$ [expected value]
+\item $\sigma^{2}_{x} = \Sigma [x^{2} \cdot P(x)] - \mu^{2}_{x}$ [variance]
+\item $\sigma_{x} = \sqrt{\Sigma [x^{2} \cdot P(x)] - \mu^{2}_{x}}$ [standard devitation]
+\item $E(X \pm Y) = E(X) \pm E(Y)$ [expected value [\textbf{trans}]]
+\item $Var(X \pm Y) = Var(X) \pm Var(Y)$ [variance [\textbf{trans}]]
+\item $e = mc^{2}$
+\item <++>
+\item <++>
+\item <++>
+\item <++>
+\item <++>
+\item <++>
+\end{itemize}
 
-%\end{itemize}
-%\end{flushright}
-%}
+}
 
-%\end{tabular}
+&
+
+\parbox{0.5\textwidth}{
+\begin{flushright}
+\begin{itemize}
+
+\item <++>
+
+\end{itemize}
+\end{flushright}
+}
+
+\end{tabular}
 \end{footnotesize}
 \end{document}
