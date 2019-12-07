@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+pdfunite $(ls -vd exported/*) completed_study_guide.pdf || echo "install pdfunite"
