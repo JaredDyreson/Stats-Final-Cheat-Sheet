@@ -1,0 +1,91 @@
+% author(s): Jared Dyreson
+% school: California State University Fullerton, 2019
+% second exam material condensed
+
+\documentclass[6pt]{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage{lmodern}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{lmodern}
+\geometry{top=1.0cm, bottom=1.0cm, left=1.0cm, right=1.0cm}
+\pagenumbering{gobble}
+
+% horizontal line spanning the whole page
+
+\newcommand{\HL}{\par\noindent\rule{\textwidth}{0.4pt}}
+
+\begin{document}
+
+\begin{footnotesize}
+
+\begin{center}
+\textbf{MATH-338 Final Cheat Sheet [<++>]}
+\end{center}
+
+\textbf{TERMS}
+
+\HL
+
+\textbf{<++>:} <++>
+
+\HL
+
+\textbf{FORMULAS}
+
+\HL
+
+\begin{scriptsize}
+\begin{tabular}{l | l}
+
+\parbox{0.3\textwidth}{
+
+\begin{itemize}
+\setlength\itemsep{0.25em}
+\item $\sqcap = (b-a) \times \frac{1}{(b-a)}$ (finite curve)
+\item $Z = \frac{x - \mu}{\sigma}$ (z-score)
+\item $X \sim N(\mu \, , \sigma)$
+\item $\bar{X} \sim N(\mu, \frac{\sigma}{\sqrt{n}})$
+\item $SEM = \frac{s}{\sqrt{n}}$ (compute standard error)
+\item $t = \frac{\bar{X} - \mu\textsubscript{0}}{\frac{s}{\sqrt{n}}}$ [NP]
+
+\item $t = \frac{\bar{x}}{\frac{s\textsubscript{d}}{\sqrt{n}}}$ [matched pair]
+
+\item $t = \frac{(\bar{x}\textsubscript{1} - \bar{x}\textsubscript{2})}{\sqrt{\frac{(s\textsubscript{1})^2}{n\textsubscript{1}} +\frac{(s\textsubscript{2})^2}{n\textsubscript{2}}}} \sim t(K)$ [NHST]
+\item $(\bar{x} \pm t^{\ast\ast} \times \frac{s}{\sqrt{n}})$ [confidence interval]
+\item $\bar{x} - t^{\ast\ast} \times \frac{s}{\sqrt{n}} < \mu < \bar{x} + t^{\ast\ast} \times \frac{s}{\sqrt{n}}$ [confidence interval when sample mean given]
+\end{itemize}
+
+}
+
+&
+
+\parbox{0.5\textwidth}{
+\begin{flushright}
+\begin{itemize}
+\setlength\itemsep{0.25em}
+\item IQR = $Q\textsubscript{3} - Q\textsubscript{1}$
+\item $K = 1.5$
+\item Lower fence: $Q\textsubscript{1} - K \times IQR$
+\item Upper fence: $Q\textsubscript{3} + K \times IQR$
+\item $t = \frac{\Delta\bar{x} - \Delta\mu}{\frac{\Delta s}{\sqrt{n}}}$
+\item $df = n-1$
+\item $df(\text{treatment}) = k - 1$ (k) $\leftarrow$ number of categories
+\item $df(\text{error}) = N - k$ (N) $\leftarrow$ total sample size.
+\item $MSTr = SSTr/(k-1)$ SSTr $\leftarrow$ sum of treatment
+\item $MSE = SSE/(N-k)$ SSE $\leftarrow$ sum of error
+\item $F = \frac{\text{MSTr}}{\text{MSE}}$
+\item $C = 1 - \alpha$ [confidence level]
+\item $((\bar{x}\textsubscript{1} - \bar{x}\textsubscript{2}) - t^{\ast\ast} \times \sqrt{\frac{s\textsubscript{1}^2}{n\textsubscript{1}} + \frac{s\textsubscript{2}^2}{n\textsubscript{2}}}), ((\bar{x}\textsubscript{1} - \bar{x}\textsubscript{2}) + t^{\ast\ast} \times \sqrt{\frac{s\textsubscript{1}^2}{n\textsubscript{1}} + \frac{s\textsubscript{2}^2}{n\textsubscript{2}}})$ [qt($\frac{\alpha}{2}$, 347.41, lower.tail = F) $\implies t^{\ast\ast}$]
+
+
+\end{itemize}
+\end{flushright}
+}
+
+\end{tabular}
+\end{scriptsize}
+\end{footnotesize}
+\end{document}
