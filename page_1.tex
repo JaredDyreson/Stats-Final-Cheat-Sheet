@@ -69,20 +69,23 @@
 
 \HL
 
-\begin{flushleft}
-\textbf{FORMULAS}
-\end{flushleft}
-
-\HL
-
 \begin{tabular}{l | l}
 
 \parbox{0.5\textwidth}{
 
+\begin{flushleft}
+\textbf{FORMULAS}
+\end{flushleft}
+
 \begin{itemize}
 
+\item $P(A^c) = 1 - P(A)$ [compliment rule]
+\item $X \sim B(n, p)$ [number of successes given $n$ amount of outcomes]
 \item $\mu_{x} = \Sigma x \cdot p(x)$ [expected value]
+\item $\mu_{x} = n \cdot p$ [mean of binomial random variable]
 \item $\sigma^{2}_{x} = \Sigma [x^{2} \cdot P(x)] - \mu^{2}_{x}$ [variance]
+\item $\sigma^{2} = n \cdot p(1-p)$ [variance of binomial random variable]
+\item $\hat{p} = \frac{x}{n}$ [estimated number of successes]
 \item $\sigma_{x} = \sqrt{\Sigma [x^{2} \cdot P(x)] - \mu^{2}_{x}}$ [standard devitation]
 \item $E(X \pm Y) = E(X) \pm E(Y)$ [expected value (transformation)]
 \item $Var(X \pm Y) = Var(X) \pm Var(Y)$ [variance (transformation)]
@@ -91,6 +94,8 @@
 \item $\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}}$ [standard deviation (sample proportion)]
 \item $E(X) = \mu_{x} = nP$ [expected value (BRV)]
 \item $Var(X) = n \cdot P \cdot (1-P)$ [variance (BRV)]
+\item $1 - \beta$ [power, at least 80\%]
+\item $\chi^2 = \Sigma \frac{O - E}{\sqrt{E}}$ [O: observed value, E: expected value]
 \end{itemize}
 
 }
@@ -152,66 +157,58 @@
 
 \HL
 
-\begin{flushleft}
-\textbf{FRAMEWORKS}
-\end{flushleft}
-
-\HL
-
-
-\begin{tabular}{l | l} 
+\begin{tabular}{l | l}
 
 \parbox{0.5\textwidth}{
 
 \begin{flushleft}
-\textbf{Neyman-Pearson Hypothesis Testing}
+\textbf{PMF TABLE (SAPLING EXAMPLE)}
 \end{flushleft}
 
-\begin{itemize}
-\item H\textsubscript{o}: $\mu = 0$
-\item H\textsubscript{a}: $\mu = n$
-\item Requires a rejection region, a small area where the null hypothesis should be rejected
-\item If the observed value falls in the region, H\textsubscript{a} is true, reject H\textsubscript{o}, vice versa.
-\end{itemize}
-
-\begin{flushleft}
-\textbf{Fisher's Significance Testing}
-\end{flushleft}
-
-\begin{itemize}
-\item Select an appropriate test
-\item Set up H\textsubscript{o}
-\item Calculate the theoretical proabability of the results under H\textsubscript{o} (\emph{p})
-\item If \emph{p} $= \alpha \therefore$ statistically significant
-\item If \emph{p} $> \alpha \therefore$ statistically insignificant
-\end{itemize}
+ \begin{tabular}{||c | c | c | c||} 
+ \hline
+ x & $P(X=x)$ & $x \cdot P(X=x)$ & $(x-\mu)^2 \cdot P(X=x)$ \\
+ \hline
+ 8 (GG) & $(1-0.7)(1-0.4)$ & $8(0.18)$ & $(8 - 9.8)^2 \cdot (0.18)$ \\ [0.5ex] 
+ \hline
+ 9 (GR) & $(1-0.7)(0.4)$ & $9(0.12)$ & $(9 - 9.8)^2 \cdot (0.12)$ \\ 
+ \hline
+ 10 (RG) & $(0.7)(1-0.4)$ & $10(0.42)$ & $(10 - 9.8)^2 \cdot (0.42)$ \\
+ \hline
+ 11 (RR) & $(0.7)(0.4)$ & $11(0.28)$ & $(11 - 9.8)^2 \cdot (0.28)$ \\ 
+ \hline
+  & p = 1 & $\mu = 9.8$ & $\sigma^2 = 1.08$ \\
+ \hline
+\end{tabular}
 
 }
 
 &
 
 \parbox{0.5\textwidth}{
-
-\begin{flushright}
-
 \begin{flushleft}
-\textbf{Null Hypothesis Significance Testing}
-\end{flushleft}
+\textbf{CONDITIONAL PROBABILITY}
+ \vspace{7px}
+
+ \begin{tabular}{||c | c | c | c||} 
+ \hline
+  & Freshman & Not Freshman & Total \\
+ \hline
+ Dog & 25 & 25 & 50 \\ [0.5ex] 
+ \hline
+ No Dog & 85 & 15 & 100 \\ 
+ \hline
+ Total & 110 & 40 & 150 \\
+ \hline
+\end{tabular}
 
 \begin{itemize}
-
-\item H\textsubscript{o}: (if candy causes cancer, assume candy does not cause cancer and find counter arguments)
-\item H\textsubscript{a}: $\theta [<,>,\ne] \theta_{1}$
-\item Find its distribution under H\textsubscript{o}
-\item Define a critical region such that if in critical region, \underline{reject H\textsubscript{o}}.
-\item Else \underline{fail to reject H\textsubscript{o}}
+\item $P(Freshman|Dog) = \frac{\frac{25}{150}}{\frac{25}{150} + \frac{25}{150}} = \frac{25}{50} = \frac{1}{2}$ 
+\item $P(Dog|Freshman) = \frac{\frac{25}{100}}{\frac{110}{150}} = \frac{25}{110} = \frac{5}{22}$
 \end{itemize}
-\end{flushright}
+\end{flushleft}
 }
 
 \end{tabular}
-\HL
-
-
 \end{footnotesize}
 \end{document}
