@@ -49,6 +49,22 @@
 \item If \emph{p} $> \alpha \therefore$ statistically insignificant
 \end{itemize}
 
+\begin{flushleft}
+\textbf{POWER ANALYSIS}
+\end{flushleft}
+
+\begin{enumerate}
+\item To compute the critical region:
+\begin{itemize}
+\item need $\alpha$, H\textsubscript{0} (value of P under H\textsubscript{0})
+\item Sampling distribution of test statistic under H\textsubscript{0}
+\end{itemize}
+\item To computer power
+\begin{itemize}
+\item Need critical region, H\textsubscript{1} (value of P under H\textsubscript{1})
+\item Sampling distribution of test statistic under H\textsubscript{1}
+\end{itemize}
+\end{enumerate}
 }
 
 &
@@ -89,4 +105,97 @@
 
 \end{tabular}
 \end{scriptsize}
+\begin{scriptsize}
+\begin{tabular}{l | l}
+
+\parbox{0.5\textwidth}{
+
+\begin{normalsize}
+\textbf{NPHT}
+\end{normalsize}
+\begin{itemize}
+
+\item Parameter is $\mu$ [population mean]. $\mu\textsubscript{0} = \mu\textsubscript{1}$
+\item $\bar{X}$ is sample mean. Under CLT, normal distribution at $\mu\textsubscript{0}$ for H\textsubscript{0} and $\mu\textsubscript{1}$ for H\textsubscript{1}.
+\item We accept H\textsubscript{0} if \underline{\underline{not}} in CR.
+
+\end{itemize}
+\begin{normalsize}
+\textbf{N-P Power Analysis}
+\end{normalsize}
+\begin{itemize}
+\item Define parameter and its value under H\textsubscript{0} and H\textsubscript{1}
+\item Define a test statistic and its sampling distribution under both hypotheses.
+\item Use $\alpha$ to compute critical region
+\item Compute power and compare to 80% threshold
+\end{itemize}
+\begin{normalsize}
+\textbf{One-Sample T-Statistic [NP]}
+\end{normalsize}
+\begin{itemize}
+\item If t\textsubscript{observed} in CR, then accept H\textsubscript{1}: $\mu = \mu\textsubscript{1}$. Else accept H\textsubscript{0}: $\mu = \mu\textsubscript{0}$
+\end{itemize}
+\begin{normalsize}
+\textbf{Two-Tailed Test}
+\end{normalsize}
+\begin{itemize}
+\item Take the upper and lower limit of the curve and the significance level ($\alpha$) is the cut off point of being \emph{statistically significant}. Treat as critical region. If in CR, then accept H\textsubscript{1}. Else accept H\textsubscript{0}.
+\end{itemize}
+
+\begin{flushleft}
+\textbf{ANOVA}
+\end{flushleft}
+\begin{itemize}
+\item Null Hypothesis: $H\textsubscript{0}: \mu\textsubscript{1} = \mu\textsubscript{2} = \mu\textsubscript{3} = \mu\textsubscript{i}$
+\item If the variability BETWEEN the means ($\Delta x$) in the numerator is relatively large compared to the variance within the samples (internal spread) in the denominator, the ratio will be much larger than 1.
+\item The samples then most likely do NOT come from a common population REJECT H\textsubscript{0}. (if at least one of the $\mu$ is not equal.)
+\item ANOVA tests \underline{\textbf{CANNOT}} determine/make conclusions about all populations means ($\forall$), only at least one element in the set ($\mu \in \forall$)
+\item \underline{Usage:} compare control group and observational studies of more than three populations.
+\end{itemize}
+}
+
+&
+
+\parbox{0.5\textwidth}{
+\begin{normalsize}
+\textbf{NHST}
+\end{normalsize}
+\begin{flushright}
+\begin{itemize}
+
+\item Define a parameter and it's value under H\textsubscript{0}.
+\item Define an interval representing an inequality
+\item Define a test statistic and its sampling distrubution under H\textsubscript{0}
+\item Compute p-value. P-Value $\le$ sig level $\implies$ reject H\textsubscript{0} \& accept H\textsubscript{1}. P-Value > sig level $\implies$ fail to reject H\textsubscript{0}. Can only be >, < $\ne$.
+
+\end{itemize}
+\end{flushright}
+\begin{normalsize}
+\textbf{Two-Sided Test}
+\end{normalsize}
+\begin{flushright}
+\begin{itemize}
+\item \textbf{Neyman-Pearson}
+\item Critical region is $\frac{1}{2}$ left tail and $\frac{1}{2}$ right tail of sampling distribution under H\textsubscript{0}. Power will $\downarrow$.
+\item \textbf{NHST}
+\item Find the "one-sided" p-value and double it.
+\end{itemize}
+
+\end{flushright}
+\begin{normalsize}
+\textbf{Matched Pairs t-Test}
+\end{normalsize}
+\begin{itemize}
+\item Paired subjects receives their respective treatment or an individual gets two treatments. Also a subset of block design. 
+\item H\textsubscript{0}: $\mu\textsubscript{d} = 0$ (no difference) and H\textsubscript{a}: $\mu\textsubscript{d} \ne 0$ (difference). 
+\item If p-value $\le \alpha$, we reject H\textsubscript{0} \& accept H\textsubscript{a} conclude there is a difference. 
+\item If p-value > significance level, we fail to reject H\textsubscript{0} cannot claim there is a difference. (We do not have any definitive truth to accept the null hypothesis)
+\item \underline{Requirements:} large population, normal distribution, $\sigma$ is unknown. 
+\end{itemize}
+\begin{flushright}
+\end{flushright}
+}
+\end{tabular}
+\end{scriptsize}
+
 \end{document}
